@@ -267,14 +267,20 @@ body {
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  border: 1px solid rgba(0, 0, 0, 0.25);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: #fff;
 
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .icon-close {
   fill: #000000;
 }
+.close-button:hover,
+.close-button:focus {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
 .close-button:hover .icon-close,
 .close-button:focus .icon-close {
   fill: var(--brand-color);
